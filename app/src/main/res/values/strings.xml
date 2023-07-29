@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Patient Crud App</string>
+    <string name="app_name">Patient Crud Application</string>
     <string name="hello">Hey there, </string>
     <string name="create_account">Register Your Self </string>
     <string name="welcome">Welcome Back</string>
