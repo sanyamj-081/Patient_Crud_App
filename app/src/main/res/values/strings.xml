@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Crud Patient Record</string>
+    <string name="hello">Hey there, </string>
+    <string name="create_account">Register Your Self </string>
+    <string name="welcome">Welcome Back</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="hide_password">Hide password</string>
+    <string name="show_password">Show password</string>
+    <string name="terms_and_conditions">By continuing you accept our Privacy Policy and Term of Use</string>
+    <string name="terms_and_conditions_header">Term of Use</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="or">or</string>
+    <string name="go_to_login">Already have an account? Login</string>
+    <string name="aadhar">Aadhar Number</string>
+    <string name="address">Address </string>
+
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="home">Home</string>
+    <string name="logout">Logout</string>
+    <string name="menu">Menu</string>
+    <string name="navigation_header">App Drawer</string>
+
+
+    <string name="create" >Register Patient</string>
+    <string name="read" >Display Patient Information</string>
+    <string name="update" >Update Patient Information</string>
+    <string name="delete" >Delete Patient Record</string>
+
+</resources>
