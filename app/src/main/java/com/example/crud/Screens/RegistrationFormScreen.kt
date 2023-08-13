@@ -1,11 +1,15 @@
 package com.example.crud.Screens
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewmodel.compose.viewModel
@@ -38,6 +42,7 @@ fun register(registrationViewModel: RegistrationViewModel = viewModel()) {
             },
             errorStatus = registrationViewModel.registrationFormUIState.value.nameError
         )
+        Spacer(modifier = Modifier.height(20.dp))
         MyTextFieldComponent(
             labelValue = stringResource(id = R.string.email),
             painterResource = painterResource(id = R.drawable.message),
@@ -46,6 +51,8 @@ fun register(registrationViewModel: RegistrationViewModel = viewModel()) {
             },
             errorStatus = registrationViewModel.registrationFormUIState.value.emailError
         )
+        Spacer(modifier = Modifier.height(20.dp))
+
         MyTextFieldComponent(
             labelValue = stringResource(id = R.string.password),
             painterResource = painterResource(id = R.drawable.ic_lock),
@@ -54,6 +61,8 @@ fun register(registrationViewModel: RegistrationViewModel = viewModel()) {
             },
             errorStatus = registrationViewModel.registrationFormUIState.value.phoneNumberError
         )
+        Spacer(modifier = Modifier.height(20.dp))
+
         MyTextFieldComponent(
             labelValue = stringResource(id = R.string.aadhar),
             painterResource = painterResource(id = R.drawable.profile),
@@ -62,6 +71,8 @@ fun register(registrationViewModel: RegistrationViewModel = viewModel()) {
             },
             errorStatus = registrationViewModel.registrationFormUIState.value.aadharNumberError
         )
+        Spacer(modifier = Modifier.height(20.dp))
+
         MyTextFieldComponent(
             labelValue = stringResource(id = R.string.address),
             painterResource = painterResource(id = R.drawable.profile),
@@ -70,6 +81,8 @@ fun register(registrationViewModel: RegistrationViewModel = viewModel()) {
             },
             errorStatus = registrationViewModel.registrationFormUIState.value.addressError
         )
+        Spacer(modifier = Modifier.height(20.dp))
+        
         ButtonComponent(
             value = stringResource(id = R.string.register),
             onButtonClicked = {

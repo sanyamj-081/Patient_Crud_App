@@ -5,7 +5,9 @@ import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
 import androidx.compose.material3.Surface
@@ -93,25 +95,28 @@ fun HomeScreen(homeViewModel: HomeViewModel = viewModel()) {
                             .padding(0.dp, 50.dp, 0.dp, 0.dp)) {
 
 //            Row(modifier = Modifier.fillMaxHeight()) {
+                            Spacer(modifier = Modifier.height(20.dp))
                             ButtonComponent(
                                 value = stringResource(id = R.string.create),
                                 onButtonClicked = {
                                   CrudAppRouter.navigateTo(Screen.RegistrationFormScreen)
                                 }
                             )
+                            Spacer(modifier = Modifier.height(20.dp))
 
-//                            ButtonComponent(
-//                                value = stringResource(id = R.string.read),
-//                                onButtonClicked = { /*TODO*/ }
-//                            )
-//
-////            }
-////            Row(modifier = Modifier.fillMaxSize()) {
-//                            ButtonComponent(
-//                                value = stringResource(id = R.string.update),
-//                                onButtonClicked = { /*TODO*/ }
-//                            )
+                            ButtonComponent(
+                                value = stringResource(id = R.string.read),
+                                onButtonClicked = { /*TODO*/ }
+                            )
+                            Spacer(modifier = Modifier.height(20.dp))
 
+//            }
+//            Row(modifier = Modifier.fillMaxSize()) {
+                            ButtonComponent(
+                                value = stringResource(id = R.string.update),
+                                onButtonClicked = { /*TODO*/ }
+                            )
+                            Spacer(modifier = Modifier.height(20.dp))
                             ButtonComponent(
                                 value = stringResource(id = R.string.delete),
                                 onButtonClicked = {
