@@ -5,16 +5,16 @@ import android.util.Log
 object Validator {
 
 
-    fun validateFirstName(fName: String): ValidationResult {
+    fun validateFirstName(name: String): ValidationResult {
         return ValidationResult(
-            (!fName.isNullOrEmpty() && fName.length >= 2)
+            (!name.isNullOrEmpty() && name.length >= 2)
         )
 
     }
 
-    fun validateLastName(lName: String): ValidationResult {
+    fun validateLastName(password: String): ValidationResult {
         return ValidationResult(
-            (!lName.isNullOrEmpty() && lName.length >= 2)
+            (!password.isNullOrEmpty() && password.length >= 2)
         )
     }
 

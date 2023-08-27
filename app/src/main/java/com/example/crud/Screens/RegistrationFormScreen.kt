@@ -59,7 +59,7 @@ fun register(registrationViewModel: RegistrationViewModel = viewModel()) {
             onTextSelected = {
                 registrationViewModel.onEvent(RegistrationFormUIEvent.PhoneNumberChanged(it))
             },
-            errorStatus = registrationViewModel.registrationFormUIState.value.phoneNumberError
+            errorStatus = registrationViewModel.registrationFormUIState.value.passwordError
         )
         Spacer(modifier = Modifier.height(20.dp))
 

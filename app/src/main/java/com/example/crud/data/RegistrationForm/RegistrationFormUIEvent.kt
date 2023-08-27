@@ -6,7 +6,7 @@ sealed class RegistrationFormUIEvent {
     data class NameChanged(val nameChanged: String) : RegistrationFormUIEvent()
     data class AadharNumberChanged(val aadharNumberChanged: String) : RegistrationFormUIEvent()
     data class AddressChanged(val addressChanged: String) : RegistrationFormUIEvent()
-    data class PhoneNumberChanged(val phoneNumberChanged: String) : RegistrationFormUIEvent()
+    data class PhoneNumberChanged(val passwordChanged: String) : RegistrationFormUIEvent()
 
     object RegisterButtonClicked : RegistrationFormUIEvent()
 

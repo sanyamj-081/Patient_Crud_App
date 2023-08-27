@@ -53,7 +53,7 @@ class RegistrationViewModel : ViewModel() {
 
             is RegistrationFormUIEvent.PhoneNumberChanged -> {
                 registrationFormUIState.value = registrationFormUIState.value.copy(
-                    phone_number = event.phoneNumberChanged
+                    password = event.passwordChanged
                 )
             }
 
@@ -70,11 +70,11 @@ class RegistrationViewModel : ViewModel() {
     private fun validateDataWithRules() {
 
         val NameResult = Validator.validateFirstName(
-            fName = registrationFormUIState.value.name
+            name = registrationFormUIState.value.name
         )
 
-        val PhoneNumberResult = Validator.validateLastName(
-            lName = registrationFormUIState.value.phone_number
+        val PasswordResult = Validator.validateLastName(
+            password = registrationFormUIState.value.password
         )
 
         val EmailResult = Validator.validateEmail(
@@ -92,7 +92,7 @@ class RegistrationViewModel : ViewModel() {
 
         registrationFormUIState.value = registrationFormUIState.value.copy(
             nameError = NameResult.status,
-            phoneNumberError = PhoneNumberResult.status,
+            passwordError = PasswordResult.status,
             emailError = EmailResult.status,
             addressError = AddressResult.status,
             aadharNumberError = AadharResult.status
@@ -100,7 +100,7 @@ class RegistrationViewModel : ViewModel() {
 
         Log.d(TAG, "Inside_validateDataWithRules")
 
-        allValidationsPassed.value = NameResult.status && PhoneNumberResult.status &&
+        allValidationsPassed.value = NameResult.status && PasswordResult.status &&
                 EmailResult.status && AadharResult.status && AddressResult.status
 
     }
@@ -109,14 +109,14 @@ class RegistrationViewModel : ViewModel() {
    fun registerform() {
         val formData = RegistrationFormUIState(
             name = registrationFormUIState.value.name,
-            phone_number = registrationFormUIState.value.phone_number,
+            password = registrationFormUIState.value.password,
             email = registrationFormUIState.value.email,
             aadhar_number = registrationFormUIState.value.aadhar_number,
             address = registrationFormUIState.value.address
         )
 
         Log.d("FormData", "Name: ${formData.name}")
-        Log.d("FormData", "Phone Number: ${formData.phone_number}")
+        Log.d("FormData", "Phone Number: ${formData.password}")
         Log.d("FormData", "Email: ${formData.email}")
         Log.d("FormData", "Aadhar Number: ${formData.aadhar_number}")
         Log.d("FormData", "Address: ${formData.address}")

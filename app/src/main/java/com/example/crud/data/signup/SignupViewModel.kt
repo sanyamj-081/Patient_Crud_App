@@ -132,11 +132,11 @@ class SignupViewModel : ViewModel() {
         private fun validateDataWithRules() {
 
         val fNameResult = Validator.validateFirstName(
-            fName = registrationUIState.value.firstName
+            name = registrationUIState.value.firstName
         )
 
         val lNameResult = Validator.validateLastName(
-            lName = registrationUIState.value.lastName
+            password = registrationUIState.value.lastName
         )
 
         val emailResult = Validator.validateEmail(
